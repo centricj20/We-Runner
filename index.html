@@ -1,35 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | WERUNNER</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-
-    <!-- 🔥 Touch Fix CSS -->
-    <style>
-        /* Make the canvas fill the screen and prevent browser gestures */
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            touch-action: none; /* disables scrolling/pinch zoom */
-        }
-
-        #unity-container, #unity-canvas {
-            width: 100vw;
-            height: 100vh;
-            display: block;
-        }
-    </style>
-</head>
+  </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1920 height=1080></canvas>
+      <canvas id="unity-canvas" width=720 height=1080></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -76,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/WeRunner.loader.js";
+      var loaderUrl = buildUrl + "/WeRunner4.loader.js";
       var config = {
-        dataUrl: buildUrl + "/WeRunner.data",
-        frameworkUrl: buildUrl + "/WeRunner.framework.js",
-        codeUrl: buildUrl + "/WeRunner.wasm",
+        dataUrl: buildUrl + "/WeRunner4.data.unityweb",
+        frameworkUrl: buildUrl + "/WeRunner4.framework.js.unityweb",
+        codeUrl: buildUrl + "/WeRunner4.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Nexus Interactive",
         productName: "WERUNNER",
@@ -122,7 +102,7 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "1920px";
+        canvas.style.width = "720px";
         canvas.style.height = "1080px";
       }
 
